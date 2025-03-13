@@ -1,57 +1,125 @@
-/* Закрепленный хедер (делаем уже) */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #222;
+}
+
+/* Шапка */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* Было 80px, теперь компактнее */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
-/* Логотип */
 .logo {
-    font-size: 20px; /* Уменьшаем размер */
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* Навигация */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Было 20px, уменьшаем */
-    padding: 0;
-    margin: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 14px; /* Было 16px, уменьшаем */
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
+    color: #000;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff6600;
+    color: #f05;
 }
 
-/* Отступ сверху для всех секций, чтобы контент не скрывался под фиксированным меню */
-section {
-    min-height: 100vh;
-    padding: 80px 20px 50px; /* Добавляем отступ сверху */
+/* Главный блок */
+.hero {
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: white;
 }
 
-/* Плавное появление */
-.fade-in {
+.hero h1 {
+    font-size: 48px;
+}
+
+/* Разделы */
+.section {
+    padding: 100px 20px;
+    text-align: center;
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Карусель */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 300px;
+    height: 300px;
+    margin: 0 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.carousel img:hover {
+    transform: scale(1.1);
+}
+
+/* Форма записи */
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#bookingForm input, #bookingForm textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+#bookingForm button {
+    padding: 10px;
+    background: #f05;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#bookingForm button:hover {
+    background: #d04;
 }
