@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Закрепленное меню */
@@ -24,18 +25,24 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0055;
 }
 
 /* Параллакс */
@@ -46,11 +53,17 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 36px;
-    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .buttons .btn {
@@ -59,6 +72,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.buttons .btn:hover {
+    background: #e6004c;
 }
 
 /* Портфолио */
@@ -80,26 +98,31 @@ nav ul li a {
     transform: scale(1.1);
 }
 
-/* Запись */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-/* Отзывы */
-.review {
+/* Обучение */
+#training {
     background: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Социальные кнопки */
+#training ul {
+    list-style: none;
+    padding: 0;
+}
+
+#training ul li {
+    margin: 10px 0;
+}
+
+/* Контакты */
+#contacts {
+    padding: 40px 20px;
+    text-align: center;
+}
+
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -110,11 +133,11 @@ form {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-/* Карта */
-.map {
-    margin-top: 20px;
+.social-links a:hover {
+    background: #e6004c;
 }
 
 /* Анимации */
@@ -127,38 +150,4 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Модальное окно */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.modal-content img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
 }

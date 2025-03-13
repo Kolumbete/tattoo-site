@@ -46,26 +46,4 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-
-    // Валидация формы
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        const name = this.name.value.trim();
-        const phone = this.phone.value.trim();
-
-        if (!name || !phone) {
-            alert("Пожалуйста, заполните все обязательные поля.");
-            return;
-        }
-
-        if (!/^\+?\d{10,15}$/.test(phone)) {
-            alert("Пожалуйста, введите корректный номер телефона.");
-            return;
-        }
-
-        // Отправка данных (можно добавить AJAX-запрос)
-        alert("Ваша заявка успешно отправлена!");
-        this.reset();
-    });
 });
