@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тату и Обучение | София</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-    <header>
+    <header id="navbar">
         <div class="logo">SOFIA TATTOO</div>
         <nav>
             <ul>
@@ -22,59 +22,77 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Татуировки и Обучение</h1>
-            <p>Создаю уникальные татуировки и обучаю с нуля</p>
-            <div class="buttons">
-                <a href="#portfolio" class="btn">Портфолио</a>
-                <a href="#training" class="btn">Обучение</a>
+    <main>
+        <!-- Заглавный экран с параллакс-эффектом -->
+        <section class="hero">
+            <div class="parallax">
+                <h1>Татуировки и Обучение</h1>
+                <p>Создаю уникальные татуировки и обучаю с нуля</p>
+                <div class="buttons">
+                    <a href="#portfolio" class="btn">Портфолио</a>
+                    <a href="#training" class="btn">Обучение</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section">
-        <h2>Обо мне</h2>
-        <p>Я профессиональный тату-мастер с многолетним опытом.</p>
-    </section>
+        <!-- Обо мне -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут София, я профессиональный тату-мастер с 5-летним опытом. Специализируюсь на уникальных эскизах и индивидуальном подходе к каждому клиенту.</p>
+            <p>Моя цель — не просто создать красивую татуировку, а сделать ее частью вашей истории.</p>
+        </section>
 
-    <section id="portfolio" class="section">
-        <h2>Портфолио</h2>
-        <div class="carousel">
-            <div class="carousel-container">
+        <!-- Портфолио -->
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <div class="gallery">
                 <img src="assets/images/tattoo1.jpg" alt="Тату 1">
                 <img src="assets/images/tattoo2.jpg" alt="Тату 2">
                 <img src="assets/images/tattoo3.jpg" alt="Тату 3">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="training" class="section">
-        <h2>Обучение</h2>
-        <p>Научитесь делать татуировки с нуля.</p>
-        <a href="#booking" class="btn">Записаться на курс</a>
-    </section>
+        <!-- Обучение -->
+        <section id="training">
+            <h2>Обучение</h2>
+            <p>Я обучаю татуировке с нуля, даже если у вас нет художественного опыта.</p>
+            <ul>
+                <li>Основы работы с машинкой</li>
+                <li>Создание эскизов</li>
+                <li>Безопасность и стерилизация</li>
+            </ul>
+            <a href="#booking" class="btn">Записаться</a>
+        </section>
 
-    <section id="booking" class="section">
-        <h2>Запись</h2>
-        <form id="bookingForm">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="tel" name="phone" placeholder="Ваш телефон" required>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
+        <!-- Запись -->
+        <section id="booking">
+            <h2>Запись</h2>
+            <form id="bookingForm">
+                <label for="service">Выберите услугу:</label>
+                <select id="service" name="service">
+                    <option value="tattoo">Запись на тату</option>
+                    <option value="training">Запись на обучение</option>
+                </select>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <textarea name="message" placeholder="Комментарий"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
 
-    <section id="contacts" class="section">
-        <h2>Контакты</h2>
-        <ul>
-            <li>Телефон: +7 (900) 123-45-67</li>
-            <li>Instagram: <a href="https://www.instagram.com/sofia_tattoo">@sofia_tattoo</a></li>
-        </ul>
-    </section>
+        <!-- Контакты -->
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <ul>
+                <li>Телефон: +7 (900) 123-45-67</li>
+                <li>Instagram: <a href="https://www.instagram.com/sofia_tattoo">@sofia_tattoo</a></li>
+                <li>Telegram: <a href="https://t.me/sofiatattoo">@sofiatattoo</a></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 SOFIA TATTOO</p>
     </footer>
-
 </body>
 </html>

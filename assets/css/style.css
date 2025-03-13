@@ -3,20 +3,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #222;
+    color: #333;
 }
 
-/* Шапка */
+/* Закрепленное меню */
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -30,96 +31,56 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     text-decoration: none;
-    color: #000;
-    transition: 0.3s;
+    color: #333;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #f05;
-}
-
-/* Главный блок */
+/* Параллакс */
 .hero {
     height: 100vh;
-    background: url('../images/background.jpg') no-repeat center center/cover;
+    background: url('../images/hero-bg.jpg') center/cover fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
+    color: white;
 }
 
-/* Разделы */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s, transform 1s;
+.buttons .btn {
+    padding: 10px 20px;
+    background: #ff0055;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Карусель */
-.carousel {
+/* Портфолио */
+.gallery {
     display: flex;
-    overflow: hidden;
     justify-content: center;
-    max-width: 100%;
+    gap: 10px;
 }
 
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel img {
+.gallery img {
     width: 300px;
-    height: 300px;
-    margin: 0 10px;
-    object-fit: cover;
+    height: auto;
     cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.carousel img:hover {
+.gallery img:hover {
     transform: scale(1.1);
 }
 
-/* Форма записи */
-#bookingForm {
+/* Запись */
+form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-
-#bookingForm input, #bookingForm textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-}
-
-#bookingForm button {
-    padding: 10px;
-    background: #f05;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#bookingForm button:hover {
-    background: #d04;
+    gap: 10px;
 }
