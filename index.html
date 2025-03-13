@@ -6,34 +6,79 @@
     <title>Тату и Обучение | София</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script defer src="assets/js/script.js"></script>
 </head>
 <body>
+
+    <!-- Закрепленное меню -->
     <header>
         <div class="logo">SOFIA TATTOO</div>
         <nav>
             <ul>
-                <li><a href="about.html">Обо мне</a></li>
-                <li><a href="portfolio.html">Портфолио</a></li>
-                <li><a href="training.html">Обучение</a></li>
-                <li><a href="booking.html">Запись</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#training">Обучение</a></li>
+                <li><a href="#booking">Запись</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Татуировки и Обучение</h1>
-            <p>Создаю уникальные татуировки и обучаю с нуля</p>
-            <div class="buttons">
-                <a href="portfolio.html" class="btn">Портфолио</a>
-                <a href="training.html" class="btn">Обучение</a>
+        <!-- Блок "Обо мне" -->
+        <section id="about" class="fade-in">
+            <h1>Обо мне</h1>
+            <p>Привет, я София – тату-мастер с многолетним опытом. Создаю уникальные татуировки, вдохновляясь природой и искусством.</p>
+        </section>
+
+        <!-- Блок "Портфолио" -->
+        <section id="portfolio" class="fade-in">
+            <h1>Портфолио</h1>
+            <div class="gallery">
+                <img src="assets/images/tattoo1.jpg" alt="Тату 1" onclick="openLightbox(this)">
+                <img src="assets/images/tattoo2.jpg" alt="Тату 2" onclick="openLightbox(this)">
+                <img src="assets/images/tattoo3.jpg" alt="Тату 3" onclick="openLightbox(this)">
             </div>
+        </section>
+
+        <!-- Блок "Обучение" -->
+        <section id="training" class="fade-in">
+            <h1>Обучение татуировке</h1>
+            <p>Научитесь делать татуировки с нуля.</p>
+        </section>
+
+        <!-- Блок "Запись" -->
+        <section id="booking" class="fade-in">
+            <h1>Запись на сеанс</h1>
+            <form id="bookingForm">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <textarea name="message" placeholder="Комментарий"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <!-- Блок "Контакты" -->
+        <section id="contacts" class="fade-in">
+            <h2>Контакты</h2>
+            <ul>
+                <li>Телефон: +7 (900) 123-45-67</li>
+                <li>Instagram: <a href="https://www.instagram.com/sofia_tattoo">@sofia_tattoo</a></li>
+                <li>Telegram: <a href="https://t.me/sofiatattoo">@sofiatattoo</a></li>
+            </ul>
         </section>
     </main>
 
+    <!-- Подвал -->
     <footer>
         <p>© 2025 SOFIA TATTOO</p>
     </footer>
+
+    <!-- Lightbox для увеличения фото -->
+    <div id="lightbox" class="hidden">
+        <span onclick="closeLightbox()">×</span>
+        <img id="lightbox-img">
+    </div>
+
 </body>
 </html>
