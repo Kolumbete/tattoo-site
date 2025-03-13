@@ -1,87 +1,55 @@
-/* Общие стили */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-}
-
-/* Закрепленный хедер */
+/* Закрепленный хедер (делаем уже) */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px; /* Было 80px, теперь компактнее */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
+/* Логотип */
+.logo {
+    font-size: 20px; /* Уменьшаем размер */
+    font-weight: bold;
+}
+
+/* Навигация */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Было 20px, уменьшаем */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
+    font-size: 14px; /* Было 16px, уменьшаем */
     font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Разделы */
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Отступ сверху для всех секций, чтобы контент не скрывался под фиксированным меню */
 section {
     min-height: 100vh;
-    padding: 100px 20px;
+    padding: 80px 20px 50px; /* Добавляем отступ сверху */
     text-align: center;
 }
 
-/* Портфолио */
-.gallery img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
-/* Lightbox */
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-#lightbox span {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Анимация появления */
+/* Плавное появление */
 .fade-in {
     opacity: 0;
     transform: translateY(50px);

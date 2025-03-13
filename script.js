@@ -1,15 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Плавный скролл к разделам
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Плавное появление секций при скролле
+    // Добавляем класс "visible" для секций при прокрутке
     const sections = document.querySelectorAll(".fade-in");
 
     function checkVisibility() {
@@ -23,15 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener("scroll", checkVisibility);
-    checkVisibility();
+    checkVisibility(); // Запуск при загрузке
 
-    // Lightbox
-    window.openLightbox = function(img) {
-        document.getElementById("lightbox-img").src = img.src;
-        document.getElementById("lightbox").classList.remove("hidden");
-    };
-
-    window.closeLightbox = function() {
-        document.getElementById("lightbox").classList.add("hidden");
-    };
+    // Плавный скролл по клику в меню
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
 });
