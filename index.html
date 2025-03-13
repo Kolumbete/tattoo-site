@@ -9,7 +9,12 @@
     <title>Тату и Обучение | София</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -30,7 +35,7 @@
         <!-- Заглавный экран с параллакс-эффектом -->
         <section class="hero">
             <div class="parallax">
-                <h1>Татуировки и Обучение</h1>
+                <h1 id="typing-effect"></h1>
                 <p>Создаю уникальные татуировки и обучаю с нуля</p>
                 <div class="buttons">
                     <a href="#portfolio" class="btn">Портфолио</a>
@@ -40,24 +45,27 @@
         </section>
 
         <!-- Обо мне -->
-        <section id="about">
+        <section id="about" class="reveal">
             <h2>Обо мне</h2>
             <p>Привет! Меня зовут София, я профессиональный тату-мастер с 5-летним опытом. Специализируюсь на уникальных эскизах и индивидуальном подходе к каждому клиенту.</p>
             <p>Моя цель — не просто создать красивую татуировку, а сделать ее частью вашей истории.</p>
         </section>
 
         <!-- Портфолио -->
-        <section id="portfolio">
+        <section id="portfolio" class="reveal">
             <h2>Портфолио</h2>
-            <div class="gallery">
-                <img src="assets/images/tattoo1.jpg" alt="Тату 1">
-                <img src="assets/images/tattoo2.jpg" alt="Тату 2">
-                <img src="assets/images/tattoo3.jpg" alt="Тату 3">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/tattoo1.jpg" alt="Тату 1"></div>
+                    <div class="swiper-slide"><img src="assets/images/tattoo2.jpg" alt="Тату 2"></div>
+                    <div class="swiper-slide"><img src="assets/images/tattoo3.jpg" alt="Тату 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
         <!-- Обучение -->
-        <section id="training">
+        <section id="training" class="reveal">
             <h2>Обучение</h2>
             <p>Я обучаю татуировке с нуля, даже если у вас нет художественного опыта.</p>
             <ul>
@@ -69,7 +77,7 @@
         </section>
 
         <!-- Медиа -->
-        <section id="media">
+        <section id="media" class="reveal">
             <h2>Медиа</h2>
             <p>Смотрите мои работы на YouTube и слушайте подкасты о татуировках.</p>
             <div class="media-links">
@@ -79,7 +87,7 @@
         </section>
 
         <!-- Контакты -->
-        <section id="contacts">
+        <section id="contacts" class="reveal">
             <h2>Контакты</h2>
             <ul>
                 <li>Телефон: +7 (900) 123-45-67</li>
