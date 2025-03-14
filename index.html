@@ -8,13 +8,14 @@
     <meta name="author" content="София Тату">
     <title>Тату и Обучение | София</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="assets/js/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header id="navbar">
@@ -24,13 +25,14 @@
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#portfolio">Портфолио</a></li>
                 <li><a href="#training">Обучение</a></li>
+                <li><a href="#media">Медиа</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Заглавный экран -->
+        <!-- Заглавный экран с параллакс-эффектом -->
         <section class="hero">
             <div class="parallax">
                 <h1 id="typing-effect"></h1>
@@ -45,7 +47,8 @@
         <!-- Обо мне -->
         <section id="about" class="reveal">
             <h2>Обо мне</h2>
-            <p>Меня зовут София, я профессиональный тату-мастер с 5-летним опытом. Работаю в разных стилях и создаю уникальные эскизы.</p>
+            <p>Привет! Меня зовут София, я профессиональный тату-мастер с 5-летним опытом. Специализируюсь на уникальных эскизах и индивидуальном подходе к каждому клиенту.</p>
+            <p>Моя цель — не просто создать красивую татуировку, а сделать ее частью вашей истории.</p>
         </section>
 
         <!-- Портфолио -->
@@ -53,9 +56,9 @@
             <h2>Портфолио</h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="assets/images/tattoo1.jpg" data-lightbox="tattoo"><img src="assets/images/tattoo1.jpg" alt="Тату 1"></a></div>
-                    <div class="swiper-slide"><a href="assets/images/tattoo2.jpg" data-lightbox="tattoo"><img src="assets/images/tattoo2.jpg" alt="Тату 2"></a></div>
-                    <div class="swiper-slide"><a href="assets/images/tattoo3.jpg" data-lightbox="tattoo"><img src="assets/images/tattoo3.jpg" alt="Тату 3"></a></div>
+                    <div class="swiper-slide"><img src="assets/images/tattoo1.jpg" alt="Тату 1"></div>
+                    <div class="swiper-slide"><img src="assets/images/tattoo2.jpg" alt="Тату 2"></div>
+                    <div class="swiper-slide"><img src="assets/images/tattoo3.jpg" alt="Тату 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -73,17 +76,31 @@
             <a href="#contacts" class="btn">Записаться</a>
         </section>
 
+        <!-- Медиа -->
+        <section id="media" class="reveal">
+            <h2>Медиа</h2>
+            <p>Смотрите мои работы на YouTube и слушайте подкасты о татуировках.</p>
+            <div class="media-links">
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+        </section>
+
         <!-- Контакты -->
         <section id="contacts" class="reveal">
             <h2>Контакты</h2>
-            <form id="booking-form">
-                <label for="service">Выберите услугу:</label>
-                <select id="service">
-                    <option value="tattoo">Татуировка</option>
-                    <option value="training">Обучение</option>
-                </select>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
+            <ul>
+                <li>Телефон: +7 (900) 123-45-67</li>
+                <li>Instagram: <a href="https://www.instagram.com/sofia_tattoo">@sofia_tattoo</a></li>
+                <li>Telegram: <a href="https://t.me/sofiatattoo">@sofiatattoo</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/sofia_tattoo" target="_blank">Instagram</a>
+                <a href="https://t.me/sofiatattoo" target="_blank">Telegram</a>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
     </main>
 
