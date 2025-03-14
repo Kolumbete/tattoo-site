@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Плавная прокрутка к разделам
+    // Плавная прокрутка
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
             e.preventDefault();
@@ -8,21 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Анимация появления секций
-    ScrollReveal().reveal('.reveal', {
-        delay: 200,
-        distance: '50px',
-        origin: 'bottom',
-        interval: 100,
-    });
-
-    // Карусель изображений
-    const swiper = new Swiper('.swiper-container', {
+    // Карусель
+    new Swiper('.swiper-container', {
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        pagination: { el: '.swiper-pagination', clickable: true },
     });
 
     // Эффект печатной машинки
