@@ -2,18 +2,18 @@ body {
     font-family: 'Tilda Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #111;
+    color: #fff;
 }
 
 header {
     position: fixed;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     z-index: 1000;
 }
 
@@ -27,16 +27,21 @@ header {
     color: white;
 }
 
-#contacts form {
-    max-width: 400px;
-    margin: auto;
+h2 {
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-#contacts select {
+#portfolio img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#portfolio img:hover {
+    transform: scale(1.05);
 }
 
 .btn {
@@ -45,4 +50,9 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e6004a;
 }
